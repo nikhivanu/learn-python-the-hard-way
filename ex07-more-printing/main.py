@@ -3,7 +3,7 @@ print("Mary had a little lamb.")
 #prints Its fleece was white as snow.
 #use format method to insert snow in the string
 print("Its fleece was white as {}.".format('snow'))
-print("."*10) #prints . 10 times
+print("." * 10) #prints . 10 times
 
 #creating variables end1 to end12
 end1 = "C"
