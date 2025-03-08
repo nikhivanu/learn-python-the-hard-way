@@ -24,4 +24,4 @@ print("Alright, all done.")
 out_file.close()
 in_file.close()
 
-#takes a source file and creates a copy of it 
+#takes a source file and creates a copy of it.
