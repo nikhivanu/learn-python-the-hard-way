@@ -17,7 +17,7 @@ def gold_room():
 
     if how_much < 50:
         print("Nice, you're not greedy, you win!")
-        exit(0)
+        just_kidding()
     else:
         dead("You greedy bastard!")
 
@@ -62,6 +62,22 @@ def cthulhu_room():
     else:
         cthulhu_room()
 
+def just_kidding():
+    print("Haha, you thought it was over?")
+    print("You have one more game to complete.")
+    print("Select one of the doors: triangle, circle, or square?")
+
+    choice = input("> ")
+    if "triangle" in choice:
+        print("You've escaped the building congrats!")
+        exit()
+    elif "square" in choice:
+        dead("You're back in the room with the bear.")
+    elif "circle" in choice:
+        print("You're stuck in the building congrats!")
+    else:
+        dead("You can't follow instructions?")
+        
 # dead function exits the game
 def dead(why):
     print(why, "Good job!") 
