@@ -29,7 +29,7 @@ def bear_room():
         elif choice == "taunt bear" and not bear_moved:
             print("The bear has moved from the door.")
             print("You can go through it now.")
-            bear_moved == True
+            bear_moved = True
         elif choice == "taunt bear" and bear_moved:
             dead("The bear gets pissed off and chews your leg off.")
         elif choice == "open door" and bear_moved:
