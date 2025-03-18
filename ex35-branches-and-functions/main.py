@@ -1,12 +1,18 @@
 from sys import exit
 
+#user enters the gold room
 def gold_room():
     print("This room is full of gold. How much do you take?")
 
+    # taking user input as a string
     choice = input("> ")
+    # if the user input has a 1 or a 0 in it then convert to int
+    # and set to variable how_much
     if "0" in choice or "1" in choice:
         how_much = int(choice)
     else:
+        # if number does not contain either of those
+        # kills user
         dead("Man, learn to type a number.")
 
     if how_much < 50:
@@ -20,8 +26,11 @@ def bear_room():
     print("The bear has a bunch of honey.")
     print("The fat bear is in front of another door.")
     print("How are you going to move the bear? (you can steal the honey or taunt the bear)")
+    # by default bear is in users way
     bear_moved = False
 
+    #while loop will keep running until user is either dead
+    # or if they exit the room
     while True:
         choice = input("> ")
         if choice == "take honey":
@@ -42,8 +51,10 @@ def cthulhu_room():
     print("He, it, whatever stares at you and you insane.") 
     print("Do you flee for your life or eat your head?") 
 
+    # takes user input
     choice = input("> ") 
 
+    # if else statements based off of users input
     if "flee" in choice:
         start()
     elif "head" in choice:
@@ -51,10 +62,12 @@ def cthulhu_room():
     else:
         cthulhu_room()
 
+# dead function exits the game
 def dead(why):
     print(why, "Good job!") 
     exit(0)
 
+# starts game
 def start(): 
     print("You are in a dark room.")
     print("There is a door to your right and left.")
@@ -68,7 +81,7 @@ def start():
         cthulhu_room()
     else:
         dead("You stumble around the room until you starve.") 
-
+# calls start game function
 start()    
         
     
